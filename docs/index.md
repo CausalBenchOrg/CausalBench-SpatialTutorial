@@ -1,12 +1,12 @@
 <!-- # Presenters’ names and bibliography, tutorial outline and what will the participants learn from the tutorial. -->
 
-# Spatio-Causal Modeling and Applications @ SIGSPATIAL'26
-[![SIGSPATIAL Logo](resources/images/sigspatiallogo.jpg)](https:..sigspatial2026.sigspatial.org)
+# Spatio-Causal Modeling and Applications
+[![TBA Logo](resources/images/TBA.jpg)](TBA)
 ## Schedule
-The tutorial will take place at [SIGSPATIAL'26](https://sigspatial2026.sigspatial.org), **TBA**, in **TBA**. 
+The tutorial will take place at [TBA](TBA), **TBA**, in **TBA**. 
 
 ## Tutorial
-In this 90-minute long tutorial, we will explore the field of Causality, the state of the art, Spatio-Causality, Spatio-Causal Algorithms and its applications over four different sub-domain tasks, a hands-on spatio-causal modeling experience using CausalBench, and then conclude with a discussion of the tutorial topics. 
+In this 180-minute long tutorial, we will explore the field of Causality, the state of the art, Spatio-Causality, Spatio-Causal Algorithms and its applications over four different sub-domain tasks, a hands-on spatio-causal modeling experience using CausalBench, and then conclude with a discussion of the tutorial topics. 
 
 Read the tutorial paper [here](TBA).
 
