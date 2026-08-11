@@ -55,14 +55,6 @@ Designated in-person presenters will be announced on this website.
 |Shu Wan|Maria Luisa Sapino|Huan Liu|K. Selçuk Candan|
 |Arizona State University|University of Torino|Arizona State University|Arizona State University|
 
-Azad, Kapkiç, Mandal, Gorantla, and Wan are graduate students in computer science at Arizona State University. Their research investigates causal dynamics across data, model, and system characteristics and uses this knowledge to improve machine-learning approaches.
-
-Maria Luisa Sapino is a Full Professor of Computer Science at the University of Torino and an Adjunct Professor at Arizona State University. Her research focuses on heterogeneous and multimedia data management and interdisciplinary, smart-data-driven applications.
-
-Huan Liu is a Professor of Computer Science and Engineering at Arizona State University. His research spans data mining, machine learning, social computing, and artificial intelligence. He is a Fellow of ACM, AAAI, AAAS, and IEEE.
-
-K. Selçuk Candan is a Professor of Computer Science and Engineering at Arizona State University and Director of ASU's Center for Assured and Scalable Data Engineering (CASCADE). His research focuses on managing and analyzing non-traditional, heterogeneous, and imprecise data.
-
 ## Program Outline
 
 The tutorial consists of two 90-minute sessions. The timing below is approximate.
@@ -151,7 +143,7 @@ You can access the [CausalBench documentation](https://docs.causalbench.org), th
 
 ## Contact
 
-For questions about the tutorial, please contact Fahim Tasneema Azad at [fazad@asu.edu](mailto:fazad@asu.edu), Ahmet Kapkiç at [akapkic@asu.edu](mailto:akapkic@asu.edu), or the CausalBench team at [support@causalbench.org](mailto:support@causalbench.org).
+For questions about the tutorial, please contact Fahim Tasneema Azad at [fazad@asu.edu](mailto:fazad@asu.edu), or the CausalBench team at [support@causalbench.org](mailto:support@causalbench.org).
 
 ## Acknowledgments
 
