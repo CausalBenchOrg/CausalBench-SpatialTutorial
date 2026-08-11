@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>CausalBench Spatio-Causal Modeling Tutorial</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">CausalBench Spatio-Causal Modeling Tutorial</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="prep/" class="nav-link">How to Prepare</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://docs.causalbench.org" class="nav-link">Documentation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="prep/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#spatio-causal-modeling-and-applications" class="nav-link">Spatio-Causal Modeling and Applications</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#schedule" class="nav-link">Schedule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tutorial" class="nav-link">Tutorial</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tutorial-material" class="nav-link">Tutorial Material</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#authors-and-presenters" class="nav-link">Authors and Presenters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#program-outline" class="nav-link">Program Outline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#covered-topics" class="nav-link">Covered Topics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#audience-and-prerequisites" class="nav-link">Audience and Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#documentation" class="nav-link">Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#selected-references" class="nav-link">Selected References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#contact" class="nav-link">Contact</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#acknowledgments" class="nav-link">Acknowledgments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="spatio-causal-modeling-and-applications">Spatio-Causal Modeling and Applications</h1>
+<p><a href="https://sigspatial2026.sigspatial.org/"><img alt="ACM SIGSPATIAL Logo" src="resources/images/sigspatial2026.png" /></a></p>
+<h2 id="schedule">Schedule</h2>
+<p>This 180-minute tutorial will take place during the <a href="https://sigspatial2026.sigspatial.org/">34th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems</a>, held <strong>Tuesday, November 3 through Friday, November 6, 2026</strong>, in <strong>Riverside, California, USA</strong>. The tutorial's exact date, time, room, and designated in-person presenters will be announced when confirmed.</p>
+<h2 id="tutorial">Tutorial</h2>
+<p>Understanding spatial phenomena is critical in application domains ranging from predicting the spatial evolution of epidemics to improving sustainability through effective water-resource management. This tutorial introduces causal and spatio-causal foundations, surveys algorithms for four major decision-support tasks, and concludes with hands-on spatio-causal modeling through CausalBench.</p>
+<h3 id="tutorial-abstract">Tutorial Abstract</h3>
+<p>Understanding spatial phenomena is critical in various application domains, from predicting spatial evolution of epidemics to helping improve sustainability through effective management of water resources. In this tutorial, we first argue that these necessitate the ability to use spatial information to gain causal situational awareness and also to leverage such causal information to tackle both aleatoric and epistemic uncertainties in decision making. In particular, we will introduce seminal as well as cutting-edge techniques for:</p>
+<ul>
+<li>uncovering causal relationships among diverse, spatially and temporally distributed entities; and</li>
+<li>developing causally informed algorithms to make recommendations, forecast future outcomes, and transfer knowledge from data-rich spatio-temporal contexts to data-poor scenarios.</li>
+</ul>
+<p>We conclude the tutorial with hands-on experience in spatio-causal modeling using the CausalBench framework.</p>
+<h3 id="learning-outcomes">Learning Outcomes</h3>
+<p>Participants will learn how to:</p>
+<ul>
+<li>explain fundamental concepts in causality, causal discovery, and causal effect estimation;</li>
+<li>describe spatial, global, and causal contexts in a complex spatial system;</li>
+<li>distinguish spatial adjacency or correlation from causality;</li>
+<li>identify methods for spatio-causal structure discovery, recommendation, forecasting, and knowledge transfer;</li>
+<li>reason about interventions, counterfactuals, confounding, and uncertainty in spatial applications; and</li>
+<li>use CausalBench to explore existing spatio-causal tasks, datasets, and models and define new ones.</li>
+</ul>
+<h2 id="tutorial-material">Tutorial Material</h2>
+<p>Tutorial materials will be shared here as they become available. These materials may be updated to provide the best hands-on CausalBench experience.</p>
+<h3 id="slides">Slides</h3>
+<p>Slides will be posted before the tutorial.</p>
+<h3 id="hands-on-notebook-google-colab">Hands-on Notebook (Google Colab)</h3>
+<p>The hands-on exercises will use Google Colab to provide attendees with a standardized execution environment. The notebook link will be posted before the tutorial.</p>
+<h2 id="authors-and-presenters">Authors and Presenters</h2>
+<p>Designated in-person presenters will be announced on this website.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="" src="resources/images/azad.jpg" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/kapkic.jpg" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/mandal.jpg" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/gorantla.jpg" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Fahim Tasneema Azad</td>
+<td style="text-align: center;"><a href="https://kapkic.github.io">Ahmet Kapkiç</a></td>
+<td style="text-align: center;">Pratanu Mandal</td>
+<td style="text-align: center;">Abhinav Gorantla</td>
+</tr>
+<tr>
+<td style="text-align: center;">Arizona State University</td>
+<td style="text-align: center;">Arizona State University</td>
+<td style="text-align: center;">Arizona State University</td>
+<td style="text-align: center;">Arizona State University</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img alt="" src="resources/images/wan.jpg" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/mlsapino.png" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/liu.jpg" /></td>
+<td style="text-align: center;"><img alt="" src="resources/images/candan.jpg" /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Shu Wan</td>
+<td style="text-align: center;">Maria Luisa Sapino</td>
+<td style="text-align: center;">Huan Liu</td>
+<td style="text-align: center;">K. Selçuk Candan</td>
+</tr>
+<tr>
+<td style="text-align: center;">Arizona State University</td>
+<td style="text-align: center;">University of Torino</td>
+<td style="text-align: center;">Arizona State University</td>
+<td style="text-align: center;">Arizona State University</td>
+</tr>
+</tbody>
+</table>
+<h2 id="program-outline">Program Outline</h2>
+<p>The tutorial consists of two 90-minute sessions. The timing below is approximate.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Part</th>
+<th style="text-align: left;">Topic</th>
+<th style="text-align: right;">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Introduction to Causality</td>
+<td style="text-align: right;">30 minutes</td>
+</tr>
+<tr>
+<td style="text-align: center;">II</td>
+<td style="text-align: left;">Spatio-Causality</td>
+<td style="text-align: right;">20 minutes</td>
+</tr>
+<tr>
+<td style="text-align: center;">III</td>
+<td style="text-align: left;">Spatio-Causal Algorithms</td>
+<td style="text-align: right;">60 minutes</td>
+</tr>
+<tr>
+<td style="text-align: center;">IV</td>
+<td style="text-align: left;">Hands-on Spatio-Causal Modeling with CausalBench</td>
+<td style="text-align: right;">50 minutes</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: left;">Discussion and Conclusion</td>
+<td style="text-align: right;">20 minutes</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>180 minutes</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="covered-topics">Covered Topics</h2>
+<h3 id="part-i-introduction-to-causality">Part I: Introduction to Causality</h3>
+<ul>
+<li>Fundamental concepts in causality</li>
+<li>Models for representing causal knowledge</li>
+<li>Causal discovery and causal effect estimation</li>
+<li>State of the art in causal discovery and inference</li>
+<li>Counterfactual and "what-if" reasoning</li>
+</ul>
+<h3 id="part-ii-spatio-causality">Part II: Spatio-Causality</h3>
+<ul>
+<li>Spatial, global, and causal contexts in complex spatial systems</li>
+<li>Representing causal strength, lag, and likelihood</li>
+<li>Focused and diffused causal effects</li>
+<li>Context-dependent and emergent causality</li>
+<li>Motivating applications in hydrology, water sustainability, and epidemic modeling</li>
+</ul>
+<h3 id="part-iii-spatio-causal-algorithms">Part III: Spatio-Causal Algorithms</h3>
+<ol>
+<li><strong>Spatio-causal structure discovery</strong><ul>
+<li>Recovering causal structure from spatial and temporal data</li>
+<li>Estimating the strength of causal relationships</li>
+<li>Handling the lack of ground-truth causal structures</li>
+</ul>
+</li>
+<li><strong>Spatio-causal recommendations</strong><ul>
+<li>Causally grounded location and intervention recommendations</li>
+<li>Reducing dependence on observational correlations</li>
+<li>Intervention and counterfactual analysis</li>
+</ul>
+</li>
+<li><strong>Spatio-causal forecasting</strong><ul>
+<li>Using physical and relational networks as inductive biases</li>
+<li>Distinguishing valid causal priors from correlational structure</li>
+<li>Explainable forecasting for epidemics, hydrology, and other spatial systems</li>
+</ul>
+</li>
+<li><strong>Spatio-causal knowledge transfer</strong><ul>
+<li>Transferring invariant causal structure across regions</li>
+<li>Domain generalization, adaptation, and disentanglement</li>
+<li>Learning from data-rich contexts for data-poor communities</li>
+</ul>
+</li>
+</ol>
+<h3 id="part-iv-hands-on-spatio-causal-modeling-with-causalbench">Part IV: Hands-on Spatio-Causal Modeling with CausalBench</h3>
+<p>Participants will use CausalBench, a task-agnostic platform for transparent and reproducible evaluation of machine-learning and causal-learning methods. The exercises will introduce standardized tasks, datasets, models, metrics, evaluation protocols, provenance tracking, and reproducible experiment environments. Participants will explore existing spatio-causal components and learn how to define new spatio-causal tasks and models.</p>
+<h3 id="part-v-discussion-and-conclusion">Part V: Discussion and Conclusion</h3>
+<p>The tutorial concludes with a discussion of spatio-causal decision-making workflows, open research challenges, and the societal impact of spatio-causality in high-impact domains such as public health and sustainability.</p>
+<h2 id="audience-and-prerequisites">Audience and Prerequisites</h2>
+<p>The tutorial is intended for researchers, students, and practitioners interested in causality, spatial domains, and their intersection. Prior exposure to causal inference, spatial analysis, statistics, machine learning, or related computational methods will help participants engage more deeply, but advanced expertise in causality or spatial modeling is not required.</p>
+<p>Participants need:</p>
+<ul>
+<li>a basic understanding of quantitative reasoning;</li>
+<li>a laptop or tablet;</li>
+<li>a stable internet connection; and</li>
+<li>access to Google Colab for the hands-on exercises.</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<p>You can access the <a href="https://docs.causalbench.org">CausalBench documentation</a>, the primary knowledge base for installing and using CausalBench.</p>
+<h2 id="selected-references">Selected References</h2>
+<ol>
+<li>Azad, F. T., et al. (2024). (Vision Paper) A Vision for Spatio-Causal Situation Awareness, Forecasting, and Planning. <em>ACM Transactions on Spatial Algorithms and Systems</em>, 10(2), 14:1-14:42.</li>
+<li>Kapkiç, A., et al. (2024). Introducing CausalBench: A Flexible Benchmark Framework for Causal Analysis and Machine Learning. In <em>Proceedings of CIKM '24</em>, 5220-5224.</li>
+<li>Kapkic, A., et al. (2026). CausalBench+: Causal-Informed Machine Learning Benchmarking. In <em>Proceedings of the WSDM Companion '26</em>, 120-122.</li>
+<li>Guo, R., Cheng, L., Li, J., Hahn, P. R., and Liu, H. (2020). A Survey of Learning Causality with Data: Problems and Methods. <em>ACM Computing Surveys</em>, 53(4), 1-37.</li>
+<li>Pearl, J. (2009). <em>Causality</em>. Cambridge University Press.</li>
+<li>Pearl, J., Glymour, M., and Jewell, N. P. (2016). <em>Causal Inference in Statistics: A Primer</em>. Wiley.</li>
+<li>Sheth, P., et al. (2022). STCD: A Spatio-Temporal Causal Discovery Framework for Hydrological Systems. In <em>Proceedings of IEEE Big Data</em>, 5578-5583.</li>
+<li>Sheth, P., et al. (2023). STREAMS: Towards Spatio-Temporal Causal Discovery with Reinforcement Learning for Streamflow Rate Prediction. In <em>Proceedings of CIKM '23</em>, 4815-4821.</li>
+<li>Wan, S., et al. (2024). Spatio-Temporal Causal Learning for Streamflow Forecasting. In <em>Proceedings of IEEE Big Data</em>, 6161-6170.</li>
+<li>Ali, S., and Wang, J. (2024). Tutorial on Causal Inference with Spatiotemporal Data. In <em>Proceedings of STCausal '24</em>, 23-25.</li>
+</ol>
+<h2 id="contact">Contact</h2>
+<p>For questions about the tutorial, please contact Fahim Tasneema Azad at <a href="mailto:fazad@asu.edu">fazad@asu.edu</a>, or the CausalBench team at <a href="mailto:support@causalbench.org">support@causalbench.org</a>.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This work is supported in part by NSF grants #2311716, #2230748, and #2412115, and USACE #GR40695. We thank all contributors and the CausalBench community for their continued support and feedback.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-08-11 02:16:15.916784+00:00
+-->
