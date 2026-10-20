@@ -57,7 +57,7 @@ The hands-on exercises will use Google Colab to provide attendees with a standar
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 |![](resources/images/azad.jpg)|![](resources/images/kapkic.jpg)|![](resources/images/mandal.jpg)|![](resources/images/gorantla.jpg)|
-|Fahim Tasneema Azad|[Ahmet Kapkiç](https://kapkic.github.io)|**Pratanu Mandal**|Abhinav Gorantla|
+|Fahim Tasneema Azad|[Ahmet Kapkiç](https://kapkic.github.io)|[**Pratanu Mandal**](https://scholar.google.com/citations?user=ItnXbPoAAAAJ&hl=en)|Abhinav Gorantla|
 |Arizona State University|Arizona State University|Arizona State University|Arizona State University|
 |![](resources/images/wan.jpg)|![](resources/images/mlsapino.png)|![](resources/images/liu.jpg)|![](resources/images/candan.jpg)|
 |Shu Wan|Maria Luisa Sapino|Huan Liu|K. Selçuk Candan|
