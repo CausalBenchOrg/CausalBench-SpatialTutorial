@@ -48,7 +48,9 @@ Slides will be posted before the tutorial.
 
 ### Hands-on Notebook (Google Colab)
 
-The hands-on exercises will use Google Colab to provide attendees with a standardized execution environment. The notebook link will be posted before the tutorial.
+The hands-on exercises will use a [Google Colab notebook](https://colab.research.google.com/drive/1-Q1a6yjAtY_hquLPSH4o5O3rSOAv0M0U?usp=sharing) to provide attendees with a standardized execution environment.
+Please open it during the tutorial follow along.
+
 
 ## Authors and Presenters
 
