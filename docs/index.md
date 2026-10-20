@@ -4,7 +4,15 @@
 
 ## Schedule
 
-This 180-minute tutorial will take place during the [34th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems](https://sigspatial2026.sigspatial.org/), held **Tuesday, November 3 through Friday, November 6, 2026**, in **Riverside, California, USA**. The tutorial's exact date, time, room, and designated in-person presenters will be announced when confirmed.
+This tutorial will take place during the [34th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems](https://sigspatial2026.sigspatial.org/), held **Tuesday, November 3 through Friday, November 6, 2026**, in **Riverside, California, USA**. The tutorial is scheduled for **November 4, 2026, from 14:00 to 17:30**. All times are **local time in Riverside, California**.
+
+**Venue:** [Riverside Convention Center](https://sigspatial2026.sigspatial.org/participation.html), 3637 5th St, Riverside, CA 92501. **Room: MR1**.
+
+| Time | Session |
+|:--|:--|
+| 14:00–15:30 | Tutorial — Part A |
+| 15:30–16:00 | Coffee break |
+| 16:00–17:30 | Tutorial — Part B |
 
 ## Tutorial
 
@@ -44,12 +52,12 @@ The hands-on exercises will use Google Colab to provide attendees with a standar
 
 ## Authors and Presenters
 
-Designated in-person presenters will be announced on this website.
+**Pratanu Mandal** is the presenting author.
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
 |![](resources/images/azad.jpg)|![](resources/images/kapkic.jpg)|![](resources/images/mandal.jpg)|![](resources/images/gorantla.jpg)|
-|Fahim Tasneema Azad|[Ahmet Kapkiç](https://kapkic.github.io)|Pratanu Mandal|Abhinav Gorantla|
+|Fahim Tasneema Azad|[Ahmet Kapkiç](https://kapkic.github.io)|**Pratanu Mandal**|Abhinav Gorantla|
 |Arizona State University|Arizona State University|Arizona State University|Arizona State University|
 |![](resources/images/wan.jpg)|![](resources/images/mlsapino.png)|![](resources/images/liu.jpg)|![](resources/images/candan.jpg)|
 |Shu Wan|Maria Luisa Sapino|Huan Liu|K. Selçuk Candan|
@@ -57,7 +65,7 @@ Designated in-person presenters will be announced on this website.
 
 ## Program Outline
 
-The tutorial consists of two 90-minute sessions. The timing below is approximate.
+The tutorial consists of two 90-minute sessions separated by a 30-minute coffee break. The topic durations below are approximate and total 180 minutes of instruction, excluding the break.
 
 | Part | Topic | Duration |
 |:--:|:--|--:|
