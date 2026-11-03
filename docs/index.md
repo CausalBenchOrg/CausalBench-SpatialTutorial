@@ -44,7 +44,7 @@ Tutorial materials will be shared here as they become available. These materials
 
 ### Slides
 
-Slides will be posted before the tutorial.
+The slides that will be used during the tutorial can be accessed on [Google Slides](https://docs.google.com/presentation/d/1KMfGvsrh8thVF5urggqUVkgOru5g59sOqp-BWr7h5Ps/edit?usp=sharing).
 
 ### Hands-on Notebook (Google Colab)
 
